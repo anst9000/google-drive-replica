@@ -29,7 +29,7 @@ export default function UpdateProfile() {
 
     updatePassword(auth.currentUser, passwordRef.current.value)
       .then(() => {
-        navigate("/")
+        navigate("/user")
       })
       .catch((err) => {
         console.log("-->", err.message)
@@ -82,7 +82,7 @@ export default function UpdateProfile() {
       </Card>
 
       <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+        <Link to="/user">Cancel</Link>
       </div>
     </CenteredContainer>
   )
